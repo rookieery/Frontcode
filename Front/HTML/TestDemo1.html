@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本标签</title>
+</head>
+<body>
+<!--标题标签-->
+<h1>季总</h1>
+<h2>季总</h2>
+<h3>季总</h3>
+<h4>季总</h4>
+<h5>季总</h5>
+<h6>季总</h6>
+<br/>
+工程力学
+<address>西安科技大学</address>
+<code>public static void main(String[] args){}</code>
+<br/>
+<marquee behavior="alternate" bgcolor="yellow">
+    <p>
+        床前明月光，
+    </p>
+    <p>
+        鸡总要跳窗！
+    </p>
+</marquee>
+<marquee behavior="scroll" scrollamount="10" bgcolor="pink">季你太美</marquee>
+<q>蔡徐坤</q>
+<span style="color: #88ff5c; font-size: x-large; ">Nice to meet you</span><br/>
+<em style="color: chocolate">You love me</em><br/>
+<strong style="color: cyan">You love me</strong><br/>
+数学公式：X^2 <br/> X<sup>2</sup>
+<br/>
+化学公式：H2O <br/>
+H<sub>2</sub>O<br/>
+<pre>
+    public void game() {
+        Random random = new Random();
+        int n = random.nextInt(99) + 1;
+       while(true) {
+           System.out.println("请输入你想猜的数字：");
+           Scanner scanner = new Scanner(System.in);
+           int input = scanner.nextInt();
+           if(input > n) {
+               System.out.println("猜大了！");
+           }
+           else if (input < n) {
+               System.out.println("猜小了！");
+           }
+           else {
+               System.out.println("恭喜你，猜对了！");
+               break;
+           }
+       }
+    }
+</pre>
+你的爱好？
+<ul type="circle">
+    <li style="color: chartreuse">k歌</li>
+    <li style="color: moccasin">打王者</li>
+    <li style="color: crimson">see movie</li>
+</ul>
+你喜欢的明星
+<ol type="I">
+    <li>蔡徐坤</li>
+    <li>范冰冰</li>
+    <li>苍老师</li>
+</ol>
+<div style="color: #ff6e89">小草</div>
+<dl style="color:red">
+    <dt>高富帅</dt>
+    <dd>季总1号</dd>
+    <dd>季总2号</dd>
+</dl>
+</body>
+</html>

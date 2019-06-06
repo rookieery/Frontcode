@@ -2,27 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>表单标签</title>
+    <title>框架标签</title>
 </head>
-<body>
-<!--form表单标签
-两个属性
-action:提交后台地址
-method:提交方式
-js事件编程
-常用：get,post
-get提交方式：（默认的）
-1.将用户信息提交到地址栏上
-2.get提交的数据大小有限
-3.get方式不适合提交敏感数据（需要加密）（MD5加密  EE-SpringSecurity）
-post提交方式：
-1.数据不会提交到地址栏
-2.提交数据大小有限制
-3.适合敏感数据（需要加密）-->
-<form action="#" method="get">
-    用户名：<input type="text" name="username"/><br/>
-    密码：<input type="password" name="username"/><br/>
-    <input type="submit"value="提交"/>
-</form>
-</body>
+<!--<body>-->
+<!--&lt;!&ndash;form表单标签-->
+<!--两个属性-->
+<!--action:提交后台地址-->
+<!--method:提交方式-->
+<!--js事件编程-->
+<!--常用：get,post-->
+<!--get提交方式：（默认的）-->
+<!--1.将用户信息提交到地址栏上-->
+<!--2.get提交的数据大小有限-->
+<!--3.get方式不适合提交敏感数据（需要加密）（MD5加密  EE-SpringSecurity）-->
+<!--post提交方式：-->
+<!--1.数据不会提交到地址栏-->
+<!--2.提交数据大小有限制-->
+<!--3.适合敏感数据（需要加密）&ndash;&gt;-->
+<!--<form action="#" method="get">-->
+    <!--用户名：<input type="text" name="username"/><br/>-->
+    <!--密码：<input type="password" name="username"/><br/>-->
+    <!--<input type="submit"value="提交"/>-->
+<!--</form>-->
+<!--</body>-->
+<frameset rows="20%,*,10%">
+    <!--每一个frame包含的html页面-->
+    <frame src="header.html" />
+    <frameset cols="15%,*">
+        <frame src="menu.html" />
+        <!--
+            frame
+                name属性：给当前main.html的frame起名称
+
+        -->
+        <frame src="main.html" name="main" />
+    </frameset>
+
+    <frame src="footer.html" />
+</frameset>
 </html>

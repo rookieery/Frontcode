@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动跳转</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <span id="time">5</span>秒之后，自动跳转到首页...
+</p>
+<script>
+    /*
+    分析：
+    1.显示页面效果<p>
+    2.倒计时读秒效果实现
+    2.1定义一个方法，获取span标签，修改span标签内容
+    2.2定义一个计时器，1秒执行一次方法
+    */
+    var second = 5;
+    var time = document.getElementById("time");
+
+    function showTime() {
+        second--;
+        if (second <= 0) {
+            location.href = "https://www.baidu.com";
+        }
+        time.innerHTML = second + "";
+    }
+    //showTime()和showTime效果不一样？？？
+    setInterval(showTime,1000);
+</script>
+</body>
+</html>

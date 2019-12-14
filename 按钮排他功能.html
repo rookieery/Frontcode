@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            height: 100px;
+            width: 100px;
+            background-color: #000;
+            color: #fff;
+            line-height: 100px;
+            /* text-align: center;默认是居中的 */
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="没怀孕" />
+    <input type="button" value="没怀孕" />
+    <input type="button" value="没怀孕" />
+    <input type="button" value="没怀孕" />
+    <input type="button" value="没怀孕" />
+    <input type="button" value="没怀孕" />
+    <script>
+        //获取点击事件
+        var btn = document.getElementsByTagName("input");
+        for (var i = 0; i < btn.length; i++) {
+            btn[i].onclick = function () {
+                for (var j = 0; j < btn.length; j++) {
+                    btn[j].value = "没怀孕";
+                    btn[j].style.color = "#fff";
+                    btn[j].style.backgroundColor = "#000";
+                }
+                //此处的this不能用btn[i]来代替
+                this.value = "怀孕了";
+                this.style.color = "#000";
+                this.style.backgroundColor = "#fff";
+            }
+        }
+    </script>
+</body>
+
+</html>

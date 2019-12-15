@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+
+        .clz {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="隐藏" id="btn">
+    <input type="button" value="隐藏" id="btn1">
+    <div id="dv"></div>
+    <script>
+        function my$(id) {
+            return document.getElementById(id);
+        }
+    </script>
+    <script>
+        var btn = my$("btn");
+        var dv = my$("dv");
+        btn.onclick = function () {
+            var str = btn.value;
+            if (str == "显示") {
+                this.value = "隐藏";
+                dv.style.display = "";
+            } else if (str == "隐藏") {
+                this.value = "显示";
+                dv.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        var btn1 = my$("btn1");
+        var dv = my$("dv");
+        btn1.onclick = function () {
+            var str = btn1.value;
+            if (str == "显示") {
+                this.value = "隐藏";
+                dv.className = "";
+            } else if (str == "隐藏") {
+                this.value = "显示";
+                dv.className = "clz";
+            }
+        }
+    </script>
+</body>
+
+</html>

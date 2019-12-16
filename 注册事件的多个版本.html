@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 第一个版本 -->
+    <input type="button" value="显示效果" onclick="alert('我被点了')">
+    <!-- 第二个版本 -->
+    <input type="button" value="开始分离代码" id="btn">
+    <script>
+        function f() {
+            alert("开始分离html和js代码");
+        }
+
+        var btn = document.getElementById("btn");
+        btn.onclick = f;
+    </script>
+    <!-- 最终版本 -->
+    <input type="button" value="最终版" id="btn1">
+    <script>
+        document.getElementById("btn1").onclick = function() {
+            alert("最终版");
+        }
+    </script>
+</body>
+
+</html>

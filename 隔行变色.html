@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="红蓝变色" id="btn1">
+    <input type="button" value="黄绿变色" id="btn2">
+    <ul id="uu">
+        <li>啦啦啦</li>
+        <li>啦啦啦</li>
+        <li>啦啦啦</li>
+        <li>啦啦啦</li>
+        <li>啦啦啦</li>
+        <li>啦啦啦</li>
+        <li>啦啦啦</li>
+    </ul>
+    <script>
+        function my$(id) {
+            return document.getElementById(id);
+        }
+    </script>
+    <script>
+        my$("btn1").onclick = function () {
+            var arr = document.getElementsByTagName("li");
+            for (var i = 0; i < arr.length; i++) {
+                i % 2 == 0 ? arr[i].style.backgroundColor = "red" : arr[i].style.backgroundColor = "blue";
+            }
+        }
+    </script>
+    <script>
+        my$("btn2").onclick = function () {
+            var count = 0;//记录有多少个li
+            //获取ul中的所有节点
+            var nodes = my$("uu").childNodes;
+            for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].nodeType == 1 && nodes[i].nodeName == "LI") {
+                    nodes[i].style.backgroundColor = count % 2 == 0 ? "yellow" : "green";
+                    count++;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

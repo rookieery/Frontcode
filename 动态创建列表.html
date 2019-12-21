@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 300px;
+            height: 400px;
+            background-color: gray;
+            margin: 10px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="创建列表1" id="btn1">
+    <input type="button" value="创建列表2" id="btn2">
+    <div id="dv1"></div>
+    <div id="dv2"></div>
+    <script>
+        function my$(id) {
+            return document.getElementById(id);
+        }
+    </script>
+    <script>
+        var names = ["杨过", "郭靖", "张无忌", "乔峰", "任我行", "令狐冲"];
+        my$("btn1").onclick = function () {
+            var str = "<ul style='list-style-type: none;cursor: point'>";
+            for (var i = 0; i < names.length; i++) {
+                //循环创建对应的li
+                str += "<li>" + names[i] + "</li>";
+            }
+            str += "</ul>";
+            my$("dv1").innerHTML = str;
+            var lists = my$("dv1").getElementsByTagName("li");
+            for (var i = 0; i < lists.length; i++) {
+                lists[i].onmouseover = mouseoverHandle;
+                lists[i].onmouseout = mouseoutHandle;
+            }
+        };
+        function mouseoverHandle() {
+            this.style.backgroundColor = "yellow";
+        }
+        function mouseoutHandle() {
+            this.style.backgroundColor = "";
+        }
+    </script>
+    <script>
+        var kungFu = ["降龙十八掌", "葵花宝典", "如来神掌", "乾坤大挪移", "独孤九剑", "九阴真经"];
+        my$("btn2").onclick = function () {
+            var ul = document.createElement("ul");
+            my$("dv2").appendChild(ul);
+            ul.style.listStyleType = "none";
+            ul.style.cursor = "point";
+            for(var i=0;i<kungFu.length;i++) {
+                var li = document.createElement("li");
+                li.innerHTML = kungFu[i];
+                ul.appendChild(li);
+                li.onmouseover = mouseoverHandle;
+                li.onmouseout = mouseoutHandle;
+            }
+        };
+    </script>
+</body>
+
+</html>

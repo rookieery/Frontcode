@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 450px;
+            margin: 200px auto;
+        }
+
+        #txt {
+            width: 350px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <input type="text" id="txt" value="">
+        <input type="button" value="搜索" id="btn">
+    </div>
+    <script>
+        function my$(id) {
+            return document.getElementById(id);
+        }
+    </script>
+    <script>
+        var keyWords = ["你是个菜鸡", "你是真滴优秀", "我喜欢你", "我会待你如初恋", "小伙子，真优秀", "小样"];
+        //获取键盘抬起事件
+        my$("txt").onkeyup = function () {
+            //每一次键盘抬起时都判断页面是否有此div
+            if (my$("dv")) {
+                my$("box").removeChild(my$("dv"));
+            }
+            var test = this.value;
+            var arr = [];
+            for (var i = 0; i < keyWords.length; i++) {
+                if (keyWords[i].indexOf(test) == 0) {
+                    arr.push(keyWords[i]);
+                }
+            }
+            if (arr.length == 0 || this.value.length == 0) {
+                if (my$("dv")) {
+                    my$("box").removeChild(my$("dv"));
+                }
+            } else {
+                //遍历数组，创建div
+                var dv = document.createElement("div");
+                //在外面文件引入就点不出来？？？
+                my$("box").appendChild(dv);
+                dv.id = "dv";//只创建一个
+                dv.style.width = "350px";
+                dv.style.border = "1px solid green";
+                //创建P标签
+                for (var i = 0; i < arr.length; i++) {
+                    var p = document.createElement("p");
+                    dv.appendChild(p);
+                    p.innerText = arr[i];
+                    p.style.margin = 0;
+                    p.style.padding = 0;
+                    p.style.cursor = "point";
+                    p.style.marginTop = "5px";
+                    p.style.marginLeft = "5px";
+                    p.onmouseover = fov;
+                    p.onmouseout = fou;
+                }
+            }
+        };
+        function fov() {
+            this.style.backgroundColor = "yellow";
+        }
+        function fou() {
+            this.style.backgroundColor = "";
+        }
+    </script>
+</body>
+
+</html>

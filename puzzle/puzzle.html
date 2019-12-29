@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="puzzle.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <!-- 便于拖拽 -->
+                <div id="f-1">
+                    <div class="picture" id="z-1"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f-2">
+                    <div class="picture" id="z-2"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f-3">
+                    <div class="picture" id="z-3"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="f-4">
+                    <div class="picture" id="z-4"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f-5">
+                    <div class="picture" id="z-5"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f-6">
+                    <div class="picture" id="z-6"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="f-7">
+                    <div class="picture" id="z-7"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f-8">
+                    <div class="picture" id="z-8"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f-9">
+                    <div class="picture" id="z-9"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- <input type="file" value="选择图片" οnchange="selectImage(this);"> -->
+    <form name="form0" id="form0">
+        <a href="javascript:;" class="file">选择图片<input type="file" name="file0" id="file0"/></a>
+    </form>
+    <input type="button" value="开始游戏" onclick="disorder()" class="start">
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="puzzle.js"></script>
+</body>
+
+</html>

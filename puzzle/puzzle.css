@@ -1,0 +1,103 @@
+table{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+table,tr,td{
+    border: 1px solid rgb(6, 213, 228);
+}
+div{
+    width: 100px;
+    height: 100px;
+}
+
+.picture{
+    background-size: 300px 300px;/* 改变原背景图片大小 */
+}
+
+form{ 
+    position: absolute;
+    top: 72%;
+    left: 47%;
+    margin-left: -113px;
+    margin-top: 15px;
+}
+/* 美化按钮 */
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+/* 变形是什么鬼 */
+.start{
+    width: 85px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    background-color: #D0EEFF;
+    color: #1E88C7;
+    position: absolute;
+    top: 72%;
+    left: 68%;
+    margin-left: -200px;
+    margin-top: 14px;
+    cursor: pointer;
+}
+.start:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+}
+
+#z-1{
+    background-position: 0 0;
+}
+#z-2{
+    background-position: -100px 0;
+}
+#z-3{
+    background-position: -200px 0;
+}
+#z-4{
+    background-position: 0 -100px;
+}
+#z-5{
+    background-position: -100px -100px;
+}
+#z-6{
+    background-position: -200px -100px;
+}
+#z-7{
+    background-position: 0 -200px;
+}
+#z-8{
+    background-position: -100px -200px;
+}
+#z-9{
+    background-position: -200px -200px;
+}
